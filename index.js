@@ -536,4 +536,5 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
+console.log("Token starts with:", process.env.DISCORD_TOKEN?.slice(0, 10));
 client.login(process.env.DISCORD_TOKEN);
