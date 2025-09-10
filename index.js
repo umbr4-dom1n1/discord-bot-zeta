@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Keep-alive server running on port ${PORT}`));
 // --- END KEEP-ALIVE ---
-require('dotenv').config();
 const { Client, GatewayIntentBits, Partials, EmbedBuilder, Routes, REST, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 const fetch = require('node-fetch');
 const Database = require('better-sqlite3');
