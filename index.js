@@ -34,6 +34,7 @@ const ROLES = {
   hostile: '1404227450459656304',
   vipProtection: '1404133238292746283',
   backup: '1403117135168934030',
+  untrainedMember: '1403089229227229184',
   supervisor: '1403087261528100904', // Additional role for all commands
   admin: '1403090295314186412' // Additional role for all commands
 };
@@ -239,7 +240,7 @@ const COMMAND_PERMISSIONS = {
   },
   untrained: {
     channel: CHANNELS.untrained,
-    roles: [ROLES.esdStaff, ROLES.supervisor, ROLES.admin]
+    roles: [ROLES.esdStaff, ROLES.untrainedMember, ROLES.supervisor, ROLES.admin]
   },
   hostile: {
     channel: CHANNELS.chat,
@@ -491,7 +492,7 @@ client.on('interactionCreate', async interaction => {
       } else if (pendingRequest.commandName === 'supervisor') {
         pingRole = `<@&${ROLES.supervisor}>`;
       } else if (pendingRequest.commandName === 'untrained') {
-        pingRole = `<@&${ROLES.esdStaff}>`;
+        pingRole = `<@&${ROLES.echoCompany}>`;
       }
       
       const fieldName = pendingRequest.commandName === 'supervisor' ? 'Training' : 'Training';
